@@ -1,3 +1,7 @@
+body {
+  background-color: rgba(0,0,0,.7);
+}
+
 .App {
   text-align: center;
 }
@@ -27,6 +31,17 @@
 .App-link {
   color: #61dafb;
 }
+
+.card__overlay {
+  background-color: black;
+  opacity: 0
+}
+
+.card__overlay:hover {
+  opacity: .8
+}
+
+
 
 @keyframes App-logo-spin {
   from {

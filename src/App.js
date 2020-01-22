@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container, Column, Row } from "reactstrap";
+import { Route } from "react-router-dom";
+import Mobile from "./screens/Mobile";
+import FrontEnd from "./screens/FrontEnd";
+import BackEnd from "./screens/BackEnd";
+import FullStack from "./screens/FullStack";
+import Contact from "./screens/Contact";
+import Resume from "./screens/Resume";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { NavigationBar } from "./components/NavigationBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="App">
+      <NavigationBar />
+      <Route path="/frontend" component={FrontEnd} />
+      <Route path="/backend" component={BackEnd} />
+      <Route path="/fullstack" component={FullStack} />
+      <Route path="/mobile" component={Mobile} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/resume" component={Resume} />
+    </Container>
   );
 }
 
