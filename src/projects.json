@@ -1,0 +1,38 @@
+{
+  "mobile": [
+    {
+      "title": "My Ambit App",
+      "description:": "",
+      "date": "",
+      "imageSource": "",
+      "link": "#"
+    }
+  ],
+  "frontend": [
+    {
+      "title": "Snap And Save",
+      "description": "Snap & Save is a new Ambit Energy product with an SMS text-based digital promotion for new Ambit Texas residential Customers who live in deregulated areas of the state. For more information, visit SnapandSave.com.",
+      "date": "Fall 2019",
+      "imageSource": "https://cdn.ambitenergy.io/images/ambitenergy/snap-and-save-logo.png",
+      "link": "https://www.ambitenergy.com/snapandsave"
+    }
+  ],
+  "backend": [
+      {
+        "title": "",
+        "description:": "",
+        "date": "",
+        "imageSource": "",
+        "link": ""
+      }
+  ],
+  "fullstack": [
+      {
+        "title": "",
+        "description:": "",
+        "date": "",
+        "imageSource": "",
+        "link": ""
+      }
+  ]
+}
