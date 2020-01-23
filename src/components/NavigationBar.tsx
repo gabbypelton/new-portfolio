@@ -41,26 +41,26 @@ export class NavigationBar extends Component<Props, State> {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/portfolio/resume">Resume</NavLink>
+                <NavLink href="/resume">Resume</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/portfolio/contact">Contact</NavLink>
+                <NavLink href="/contact">Contact</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Work
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <Link to="/portfolio/frontend">
+                  <Link to="/frontend">
                     <DropdownItem>Front End</DropdownItem>
                   </Link>
-                  <Link to="/portfolio/backend">
+                  <Link to="/backend">
                     <DropdownItem>Back End</DropdownItem>
                   </Link>
-                  <Link to="/portfolio/fullstack">
+                  <Link to="/fullstack">
                     <DropdownItem>Full Stack</DropdownItem>
                   </Link>
-                  <Link to="/portfolio/mobile">
+                  <Link to="/mobile">
                     <DropdownItem>Mobile</DropdownItem>
                   </Link>
                 </DropdownMenu>

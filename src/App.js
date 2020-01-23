@@ -15,12 +15,12 @@ function App() {
   return (
     <Container className="App">
       <NavigationBar />
-      <Route path="/portfolio/frontend" component={FrontEnd} />
-      <Route path="/portfolio/backend" component={BackEnd} />
-      <Route path="/portfolio/fullstack" component={FullStack} />
-      <Route path="/portfolio/mobile" component={Mobile} />
-      <Route path="/portfolio/contact" component={Contact} />
-      <Route path="/portfolio/resume" component={Resume} />
+      <Route path="/frontend" component={FrontEnd} />
+      <Route path="/backend" component={BackEnd} />
+      <Route path="/fullstack" component={FullStack} />
+      <Route path="/mobile" component={Mobile} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/resume" component={Resume} />
     </Container>
   );
 }
