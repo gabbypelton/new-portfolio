@@ -41,10 +41,9 @@ export class NavigationBar extends Component<Props, State> {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/resume">Resume</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/contact">Contact</NavLink>
+                <Link to="/contact">
+                  <NavLink>Contact</NavLink>
+                </Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -66,7 +65,9 @@ export class NavigationBar extends Component<Props, State> {
                 </DropdownMenu>
               </UncontrolledDropdown>
             </Nav>
-            <NavbarText><a href="https://github.com/greatgabsp">github</a></NavbarText>
+            <NavbarText>
+              <a href="https://github.com/greatgabsp">github</a>
+            </NavbarText>
           </Collapse>
         </Navbar>
       </div>
