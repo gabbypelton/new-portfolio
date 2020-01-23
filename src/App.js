@@ -20,7 +20,7 @@ function App() {
       <Route path="/fullstack" component={FullStack} />
       <Route path="/mobile" component={Mobile} />
       <Route path="/contact" component={Contact} />
-      <Route path="/" component={Resume} />
+      <Route exact path="/" component={Resume} />
     </Container>
   );
 }

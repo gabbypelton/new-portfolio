@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { PortfolioItem } from "../components/PortfolioItem";
-import projects from "../projects.json";
-import { Card } from "reactstrap";
+import ProjectItem from "../components/ProjectItem";
+import projects from "../assets/projects.json";
+import { Row } from "reactstrap";
 
 interface Props {}
 interface State {}
@@ -12,9 +12,9 @@ export class FrontEnd extends Component<Props, State> {
 
   render() {
     return (
-      <div>
+      <Row className="projects__container">
         {projects.frontend.map(project => {
-          return <PortfolioItem 
+          return <ProjectItem 
             title={project.title}
             description={project.description}
             date={project.date}
@@ -22,7 +22,7 @@ export class FrontEnd extends Component<Props, State> {
             link={project.link}
           />;
         })}
-      </div>
+      </Row>
     );
   }
 }

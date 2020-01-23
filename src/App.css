@@ -45,6 +45,16 @@ body {
   display: none;
 }
 
+.projects__container{
+  display: flex;
+  flex-direction: column nowrap;
+  align-items: space-evenly;
+}
+
+.projects__item {
+  margin-top: 2rem;
+}
+
 @media only screen and  (max-width: 996px) {
   .resume__iframe {
     display: none;

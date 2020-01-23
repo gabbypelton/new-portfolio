@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { PortfolioItem } from "../components/PortfolioItem";
+import ProjectItem from "../components/ProjectItem";
 import pic from "../assets/resume.jpg";
 
 interface Props {}

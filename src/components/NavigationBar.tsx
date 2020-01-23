@@ -36,7 +36,7 @@ export class NavigationBar extends Component<Props, State> {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Gabriella Pelton</NavbarBrand>
+          <NavbarBrand href="/portfolio">Gabriella Pelton</NavbarBrand>
           <NavbarToggler onClick={this.toggle.bind(this)} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
