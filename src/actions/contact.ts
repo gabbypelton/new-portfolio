@@ -2,7 +2,7 @@ import { Dispatch } from "redux";
 import Axios from "axios";
 import types from "./types";
 
-Axios.defaults.baseURL = "http://localhost:5000";
+Axios.defaults.baseURL = "https://gabby-portfolio.herokuapp.com";
 
 export const sendMessage = (message: string) => (dispatch: Dispatch) => {
   dispatch({ type: types.ADD_MESSAGE });
