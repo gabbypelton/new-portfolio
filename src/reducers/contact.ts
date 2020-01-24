@@ -1,5 +1,12 @@
+import types from "../actions/types";
+
+export interface message {
+  content: string;
+  _id: string;
+  createdOn: string;
+}
 export interface contactState {
-  messages: string[];
+  messages: message[];
 }
 
 const INITIAL_STATE = {
@@ -11,15 +18,16 @@ export default (
   action: any
 ): contactState => {
   switch (action.type) {
-    case "LOAD_STATE":
+    case types.GET_MESSAGES_SUCCESS:
       return {
         ...state,
-        messages: action.state.messages
+        messages: action.payload.messages
       };
-    case "SEND_MESSAGE":
+    case types.ADD_MESSAGE_SUCCESS:
+      const {savedMessage, content} = action.payload; 
       return {
         ...state,
-        messages: [...state.messages, action.message]
+        messages: [...state.messages, {...savedMessage, content}]
       }
     default:
       return state;

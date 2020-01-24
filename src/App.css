@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .App {
@@ -14,18 +14,18 @@ body {
 
 .card__overlay {
   background-color: black;
-  opacity: 0
+  opacity: 0;
 }
 
 .card__overlay:hover {
-  opacity: .8
+  opacity: 0.8;
 }
 
 .resume__img {
   display: none;
 }
 
-.projects__container{
+.projects__container {
   display: flex;
   flex-direction: column nowrap;
   align-items: space-evenly;
@@ -37,9 +37,29 @@ body {
 
 .contact__detail {
   margin-top: 1rem;
+  opacity: .7;
 }
 
-@media only screen and  (max-width: 996px) {
+.contact__detail a {
+  color: rgb(191, 174, 206);
+}
+
+.contact__line {
+  justify-content: center;
+}
+
+.contact__messages {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.contact__message {
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 996px) {
   .resume__iframe {
     display: none;
   }
@@ -47,7 +67,6 @@ body {
     display: block;
     width: 100%;
   }
-  
 }
 
 @keyframes App-logo-spin {

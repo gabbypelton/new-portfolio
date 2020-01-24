@@ -2,26 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import pic from "../assets/resume.jpg";
 import { Button } from "reactstrap";
-import { rootState } from "../reducers/store";
-import { saveState, loadState } from "../actions/global";
 
 interface Props {
-  state: rootState
-  saveState: any,
-  loadState: any
 }
 interface State {}
 
 export class Resume extends Component<Props, State> {
   state = {};
-
-  componentDidMount() {
-    this.props.loadState();
-  }
-
-  componentWillUnmount() {
-    this.props.saveState();
-  }
 
   render() {
     return (
@@ -52,13 +39,4 @@ export class Resume extends Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: any) => ({
-  state
-});
-
-const mapDispatchToProps = {
-  loadState,
-  saveState
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Resume);
+export default connect()(Resume);
