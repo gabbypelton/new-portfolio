@@ -23,7 +23,7 @@ interface State {
 
 export class NavigationBar extends Component<Props, State> {
   state = {
-    isOpen: false
+    isOpen: false,
   };
 
   toggle() {
@@ -36,7 +36,9 @@ export class NavigationBar extends Component<Props, State> {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/portfolio">Gabriella Pelton</NavbarBrand>
+          <Link to="/">
+            <NavbarBrand>Gabriella Pelton</NavbarBrand>
+          </Link>
           <NavbarToggler onClick={this.toggle.bind(this)} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
