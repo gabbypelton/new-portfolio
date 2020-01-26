@@ -32,8 +32,9 @@ export class Resume extends Component<Props, State> {
           height="1250"
           scrolling="no"
           frameBorder="none"
+          title="resume"
         />
-        <img className="resume__img" src={pic} />
+        <img className="resume__img" src={pic} alt="Gabriella Pelton Resume 2020"/>
       </div>
     );
   }

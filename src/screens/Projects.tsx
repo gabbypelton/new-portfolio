@@ -13,10 +13,11 @@ export class FrontEnd extends Component<Props, State> {
   render() {
     return (
       <Row className="projects__container">
-        {projects.frontend.map(project => {
+        {projects.map(project => {
           return <ProjectItem 
             title={project.title}
             description={project.description}
+            contribution={project.contribution}
             date={project.date}
             imageSource={project.imageSource}
             link={project.link}

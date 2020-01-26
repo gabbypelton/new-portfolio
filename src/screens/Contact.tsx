@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Row, Col, Form, Input, Button } from "reactstrap";
 import moment from "moment";
+// @ts-ignore
+import { Bounce } from "react-activity";
 import { sendMessage, getMessages, getToken } from "../actions/contact";
 import { message } from "../reducers/contact";
 
@@ -10,6 +12,7 @@ interface Props {
   getToken: Function;
   getMessages: Function;
   messages: message[];
+  contactIsLoading: boolean;
 }
 interface State {
   message: string;
@@ -77,7 +80,9 @@ export class Contact extends Component<Props, State> {
                 email me at:
               </Row>
               <Row className="contact__line">
-                <a href="mailto:gabriellapelton@gmail.com">gabriellapelton@gmail.com</a>
+                <a href="mailto:gabriellapelton@gmail.com">
+                  gabriellapelton@gmail.com
+                </a>
               </Row>
             </Col>
           </Row>
@@ -91,6 +96,7 @@ export class Contact extends Component<Props, State> {
                   </Row>
                 );
               })}
+              {this.props.contactIsLoading ? (<Row><Bounce/></Row>) : null}
             </Col>
           </Row>
         </Col>
@@ -100,7 +106,8 @@ export class Contact extends Component<Props, State> {
 }
 
 const mapStateToProps = (state: any) => ({
-  messages: state.contact.messages
+  messages: state.contact.messages,
+  contactIsLoading: state.contact.isLoading
 });
 
 const mapDispatchToProps = {

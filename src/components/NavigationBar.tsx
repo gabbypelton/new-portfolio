@@ -8,10 +8,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText
 } from "reactstrap";
 import { Link } from "react-router-dom";
@@ -23,7 +19,7 @@ interface State {
 
 export class NavigationBar extends Component<Props, State> {
   state = {
-    isOpen: false,
+    isOpen: false
   };
 
   toggle() {
@@ -43,29 +39,15 @@ export class NavigationBar extends Component<Props, State> {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
+                <Link to="/projects">
+                  <NavLink>Projects</NavLink>
+                </Link>
+              </NavItem>
+              <NavItem>
                 <Link to="/contact">
                   <NavLink>Contact</NavLink>
                 </Link>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Work
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <Link to="/frontend">
-                    <DropdownItem>Front End</DropdownItem>
-                  </Link>
-                  <Link to="/backend">
-                    <DropdownItem>Back End</DropdownItem>
-                  </Link>
-                  <Link to="/fullstack">
-                    <DropdownItem>Full Stack</DropdownItem>
-                  </Link>
-                  <Link to="/mobile">
-                    <DropdownItem>Mobile</DropdownItem>
-                  </Link>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
             <NavbarText>
               <a href="https://github.com/greatgabsp">github</a>

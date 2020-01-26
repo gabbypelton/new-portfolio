@@ -7,10 +7,12 @@ export interface message {
 }
 export interface contactState {
   messages: message[];
+  isLoading: boolean;
 }
 
 const INITIAL_STATE = {
-  messages: []
+  messages: [],
+  isLoading: false
 };
 
 export default (
@@ -18,17 +20,28 @@ export default (
   action: any
 ): contactState => {
   switch (action.type) {
+    case types.GET_MESSAGES:
+      return {
+        ...state,
+        isLoading: true
+      };
     case types.GET_MESSAGES_SUCCESS:
       return {
         ...state,
-        messages: action.payload.messages
+        messages: action.payload.messages,
+        isLoading: false
       };
-    case types.ADD_MESSAGE_SUCCESS:
-      const {savedMessage, content} = action.payload; 
+    case types.GET_MESSAGES_FAIL:
       return {
         ...state,
-        messages: [...state.messages, {...savedMessage, content}]
-      }
+        isLoading: false
+      };
+    case types.ADD_MESSAGE_SUCCESS:
+      const { savedMessage, content } = action.payload;
+      return {
+        ...state,
+        messages: [...state.messages, { ...savedMessage, content }]
+      };
     default:
       return state;
   }

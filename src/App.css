@@ -18,7 +18,7 @@ body {
 }
 
 .card__overlay:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .resume__img {
@@ -27,12 +27,16 @@ body {
 
 .projects__container {
   display: flex;
-  flex-direction: column nowrap;
-  align-items: space-evenly;
+  flex-flow: row wrap;
 }
 
 .projects__item {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgb(191, 174, 206);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact__detail {

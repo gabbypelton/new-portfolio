@@ -1,66 +1,38 @@
-{
-  "mobile": [
-    {
-      "title": "My Ambit App",
-      "description:": "",
-      "date": "",
-      "imageSource": "",
-      "link": "#"
-    }
-  ],
-  "frontend": [
-    {
-      "title": "Snap And Save",
-      "description": "Snap & Save is a new Ambit Energy product with an SMS text-based digital promotion for new Ambit Texas residential Customers who live in deregulated areas of the state. For more information, visit SnapandSave.com.",
-      "date": "Fall 2019",
-      "imageSource": "https://cdn.ambitenergy.io/images/ambitenergy/snap-and-save-logo.png",
-      "link": "https://www.ambitenergy.com/snapandsave"
-    },
-    {
-      "title": "Snap And Save",
-      "description": "Snap & Save is a new Ambit Energy product with an SMS text-based digital promotion for new Ambit Texas residential Customers who live in deregulated areas of the state. For more information, visit SnapandSave.com.",
-      "date": "Fall 2019",
-      "imageSource": "https://cdn.ambitenergy.io/images/ambitenergy/snap-and-save-logo.png",
-      "link": "https://www.ambitenergy.com/snapandsave"
-    },
-    {
-      "title": "Snap And Save",
-      "description": "Snap & Save is a new Ambit Energy product with an SMS text-based digital promotion for new Ambit Texas residential Customers who live in deregulated areas of the state. For more information, visit SnapandSave.com.",
-      "date": "Fall 2019",
-      "imageSource": "https://cdn.ambitenergy.io/images/ambitenergy/snap-and-save-logo.png",
-      "link": "https://www.ambitenergy.com/snapandsave"
-    },
-    {
-      "title": "Snap And Save",
-      "description": "Snap & Save is a new Ambit Energy product with an SMS text-based digital promotion for new Ambit Texas residential Customers who live in deregulated areas of the state. For more information, visit SnapandSave.com.",
-      "date": "Fall 2019",
-      "imageSource": "https://cdn.ambitenergy.io/images/ambitenergy/snap-and-save-logo.png",
-      "link": "https://www.ambitenergy.com/snapandsave"
-    },
-    {
-      "title": "Snap And Save",
-      "description": "Snap & Save is a new Ambit Energy product with an SMS text-based digital promotion for new Ambit Texas residential Customers who live in deregulated areas of the state. For more information, visit SnapandSave.com.",
-      "date": "Fall 2019",
-      "imageSource": "https://cdn.ambitenergy.io/images/ambitenergy/snap-and-save-logo.png",
-      "link": "https://www.ambitenergy.com/snapandsave"
-    }
-  ],
-  "backend": [
-      {
-        "title": "",
-        "description:": "",
-        "date": "",
-        "imageSource": "",
-        "link": ""
-      }
-  ],
-  "fullstack": [
-      {
-        "title": "",
-        "description:": "",
-        "date": "",
-        "imageSource": "",
-        "link": ""
-      }
-  ]
-}
+[
+  {
+    "title": "My Ambit App",
+    "description": "A mobile app for Ambit customers to view their usage, pay their bill, contact customer service, and more. Built in React Native with a .NET Core back end.",
+    "contribution": "Mobile views for real-time pricing, usage graph, debugging, maintenance",
+    "date": "2018-2020",
+    "tags": ["full stack", "front-end", "back-end", "react native", ".NET", "react", "mobile"],
+    "imageSource": "https://imgur.com/WkDh1lv.gif",
+    "link": "https://play.google.com/store/apps/details?id=com.myambitapp&hl=en_US"
+  },
+  {
+    "title": "Snap And Save",
+    "description": "Snap & Save is a new Ambit Energy product with an SMS text-based digital promotion for new Ambit Texas residential Customers who live in deregulated areas of the state.",
+    "contribution": "Data exceptions UI (front and back end)",
+    "date": "2019",
+    "tags": ["full stack", "front-end", "back-end", "javascript"],
+    "imageSource": "https://cdn.ambitenergy.io/images/ambitenergy/snap-and-save-logo.png",
+    "link": "https://www.snapandsave.com"
+  },
+  {
+    "title": "Wobbly App",
+    "description": "Wobbly is a workplace organising platform, currently under development. We’re creating a space for energetic, powerful, and democratic unions to win struggles and grow.",
+    "contribution": "Authentication, email verification, REST refactor",
+    "date": "2019-2020",
+    "tags": ["full-stack", "front-end", "back-end", "javascript", "react native", "GraphQL", "elixir"],
+    "imageSource": "https://notesfrombelow.org/media/articles/wobblyapp.jpg",
+    "link": "https://wobbly.app"
+  },
+  {
+    "title": "Gabriella Pelton Portfolio Site",
+    "description": "This site.",
+    "contribution": "All of it because it's for me. I used React and a couple of open source libraries. Click to see the repo on Github.",
+    "date": "January 2020",
+    "tags": [],
+    "imageSource": "https://imgur.com/zkJWCfR.png",
+    "link": "https://github.com/greatgabsp/portfolio"
+  }
+]
