@@ -52,15 +52,27 @@ body {
   justify-content: center;
 }
 
-.contact__messages {
+.contact__messages-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.contact__messages-column {
   margin-top: 1rem;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   align-items: center;
+  height: 40vh;
+  width: 50%;
+  max-width: 400px;
+  overflow-y: auto;
 }
 
 .contact__message {
   margin-top: 1rem;
+  width: 100%;
+  text-align: left;
 }
 
 @media only screen and (max-width: 996px) {

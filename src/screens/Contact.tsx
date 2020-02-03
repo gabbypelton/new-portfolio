@@ -4,7 +4,7 @@ import { Row, Col, Form, Input, Button } from "reactstrap";
 import moment from "moment";
 // @ts-ignore
 import { Bounce } from "react-activity";
-import { sendMessage, getMessages, getToken } from "../actions/contact";
+import { sendMessage } from "../actions/contact";
 import { message } from "../reducers/contact";
 
 interface Props {
@@ -23,15 +23,6 @@ export class Contact extends Component<Props, State> {
     message: ""
   };
 
-  componentDidMount() {
-    const token = localStorage.getItem("contactToken");
-    if (!token) {
-      this.props.getToken();
-    } else {
-      this.props.getMessages();
-    }
-  }
-
   setMessage(event: any) {
     this.setState({
       message: event.target.value
@@ -40,11 +31,22 @@ export class Contact extends Component<Props, State> {
 
   submitMessage() {
     this.props.sendMessage(this.state.message);
+    this.setState({
+      message: ""
+    })
+  }
+
+  handleKey(e: any) {
+    console.log(e.which);
+    if (e.which === 13) {
+      e.preventDefault();
+      this.submitMessage();
+    }
   }
 
   render() {
     return (
-      <Row style={{ color: "white", minHeight: "50vh" }}>
+      <Row style={{ color: "white", minHeight: "100vh" }}>
         <Col
           style={{
             display: "flex",
@@ -60,7 +62,7 @@ export class Contact extends Component<Props, State> {
               justifyContent: "center"
             }}
           >
-            <Form>
+            <Form onKeyDown={(e) => this.handleKey(e)}>
               <Input
                 style={{ height: "100%", width: "100%" }}
                 type="textarea"
@@ -86,8 +88,8 @@ export class Contact extends Component<Props, State> {
               </Row>
             </Col>
           </Row>
-          <Row>
-            <Col className="contact__messages">
+          <Row className="contact__messages-row">
+            <Col className="contact__messages-column">
               {this.props.messages.map(message => {
                 return (
                   <Row className="contact__message" key={message._id}>
@@ -111,9 +113,7 @@ const mapStateToProps = (state: any) => ({
 });
 
 const mapDispatchToProps = {
-  sendMessage,
-  getMessages,
-  getToken
+  sendMessage
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contact);

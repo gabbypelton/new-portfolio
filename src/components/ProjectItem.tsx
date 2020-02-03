@@ -31,6 +31,7 @@ export class ProjectItem extends Component<Props, State> {
           <Card inverse>
             <CardImg
               style={{
+                minHeight: "300px",
                 maxHeight: "80vh",
                 maxWidth: "100%",
                 height: "auto",
@@ -45,11 +46,11 @@ export class ProjectItem extends Component<Props, State> {
                 <small style={{width: "100%"}}className="text-muted">{this.props.date}</small>
               </CardTitle>
               <CardText>
-                <text style={{ fontWeight: "bold" }}>Product Description: </text>
+                <b>Product Description:<br/></b>
                 {this.props.description}
               </CardText>
               <CardText>
-                <text style={{ fontWeight: "bold" }}>My contribution: </text>
+                <b>My contribution:<br/></b>
                 {this.props.contribution}
               </CardText>
             </CardImgOverlay>
