@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, ReactNode, ReactElement } from "react";
 import { connect } from "react-redux";
 import { Row, Col, Form, Input, Button } from "reactstrap";
 import moment from "moment";
+import {animateScroll } from "react-scroll";
 // @ts-ignore
 import { Bounce } from "react-activity";
 import { sendMessage } from "../actions/contact";
@@ -20,8 +21,18 @@ interface State {
 
 export class Contact extends Component<Props, State> {
   state = {
-    message: ""
+    message: "",
   };
+
+  componentDidMount() {
+    this.scrollToBottom(true);
+  }
+
+  componentDidUpdate(prevProps: Props) {
+    if (prevProps.messages.length < this.props.messages.length) {
+      this.scrollToBottom(false);
+    }
+  }
 
   setMessage(event: any) {
     this.setState({
@@ -33,25 +44,32 @@ export class Contact extends Component<Props, State> {
     this.props.sendMessage(this.state.message);
     this.setState({
       message: ""
-    })
+    });
   }
 
   handleKey(e: any) {
-    console.log(e.which);
     if (e.which === 13) {
       e.preventDefault();
       this.submitMessage();
     }
   }
 
+  scrollToBottom(smooth: boolean) {
+    animateScroll.scrollToBottom({
+      containerId: "messages_container",
+      duration: smooth ? 2500 : 0,
+      delay: smooth ? 500 : 0
+    });
+}
+
   render() {
     return (
-      <Row style={{ color: "white", minHeight: "100vh" }}>
+      <Row style={{ color: "white", height: "90vh" }}>
         <Col
           style={{
             display: "flex",
+            height: "100%",
             flexDirection: "column",
-            height: "inherit",
             justifyContent: "center"
           }}
         >
@@ -88,8 +106,8 @@ export class Contact extends Component<Props, State> {
               </Row>
             </Col>
           </Row>
-          <Row className="contact__messages-row">
-            <Col className="contact__messages-column">
+          <Row className="contact__row">
+            <Col className="contact__column contact__column--messages" id="messages_container">
               {this.props.messages.map(message => {
                 return (
                   <Row className="contact__message" key={message._id}>
@@ -106,6 +124,7 @@ export class Contact extends Component<Props, State> {
     );
   }
 }
+
 
 const mapStateToProps = (state: any) => ({
   messages: state.contact.messages,

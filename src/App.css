@@ -52,13 +52,13 @@ body {
   justify-content: center;
 }
 
-.contact__messages-row {
+.contact__row {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-.contact__messages-column {
+.contact__column {
   margin-top: 1rem;
   display: flex;
   flex-flow: column nowrap;
