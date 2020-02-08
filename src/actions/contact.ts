@@ -2,7 +2,11 @@ import { Dispatch } from "redux";
 import Axios from "axios";
 import types from "./types";
 
-Axios.defaults.baseURL = "https://gabby-portfolio.herokuapp.com";
+if (process.env.NODE_ENV === "production") {
+  Axios.defaults.baseURL = "https://gabby-portfolio.herokuapp.com";
+} else {
+  Axios.defaults.baseURL = "http://localhost:5000";
+}
 
 export const sendMessage = (message: string) => (dispatch: Dispatch) => {
   dispatch({ type: types.ADD_MESSAGE });
@@ -36,7 +40,7 @@ export const getToken = () => (dispatch: Dispatch) => {
 export const getMessages = () => (dispatch: Dispatch) => {
   dispatch({ type: types.GET_MESSAGES });
   const token = localStorage.getItem("contactToken");
-  Axios.get(`/messages/mine?token=${token}`)
+  return Axios.get(`/messages/mine?token=${token}`)
     .then(response => {
       dispatch({
         type: types.GET_MESSAGES_SUCCESS,
@@ -45,5 +49,9 @@ export const getMessages = () => (dispatch: Dispatch) => {
     })
     .catch(error => {
       dispatch({ type: types.GET_MESSAGES_FAIL, error });
+      if (error.response && error.response.status === 404) {
+        // @ts-ignore
+        dispatch(getToken());
+      }
     });
 };
