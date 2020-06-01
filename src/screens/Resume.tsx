@@ -3,8 +3,7 @@ import { connect } from "react-redux";
 import pic from "../assets/resume.jpg";
 import { Button } from "reactstrap";
 
-interface Props {
-}
+interface Props {}
 interface State {}
 
 export class Resume extends Component<Props, State> {
@@ -12,7 +11,7 @@ export class Resume extends Component<Props, State> {
 
   render() {
     return (
-      <div style={{width: "inherit", maxWidth: "inherit"}}>
+      <div style={{ width: "inherit", maxWidth: "inherit" }}>
         <div
           style={{
             width: "100%",
@@ -20,10 +19,15 @@ export class Resume extends Component<Props, State> {
             backgroundColor: "#f8f9fa",
             display: "flex",
             flexFlow: "row nowrap",
-            justifyContent: "center"
+            justifyContent: "center",
           }}
         >
-          <a href="./resume.pdf" download="Gabriella Pelton Resume 2020"><Button>Download PDF</Button></a>
+          <a
+            href="./Gabriella Pelton Resume 2020.pdf"
+            download="Gabriella Pelton Resume 2020"
+          >
+            <Button>Download PDF</Button>
+          </a>
         </div>
         <iframe
           className="resume__iframe"
@@ -34,7 +38,11 @@ export class Resume extends Component<Props, State> {
           frameBorder="none"
           title="resume"
         />
-        <img className="resume__img" src={pic} alt="Gabriella Pelton Resume 2020"/>
+        <img
+          className="resume__img"
+          src={pic}
+          alt="Gabriella Pelton Resume 2020"
+        />
       </div>
     );
   }
