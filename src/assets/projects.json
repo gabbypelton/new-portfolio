@@ -1,10 +1,27 @@
 [
   {
+    "title": "DriveFair",
+    "description": "Food delivery app. Web application for restaurants to create menu items, and customers to order. Mobile application for drivers to pick up, navigate, and deliver orders.",
+    "contribution": "100% of front-end, back-end, and mobile development.",
+    "date": "May 2020",
+    "tags": [],
+    "imageSource": "https://imgur.com/zxlhbGd.gif",
+    "link": "https://drivefair.netlify.com"
+  },
+  {
     "title": "My Ambit App",
     "description": "A mobile app for Ambit customers to view their usage, pay their bill, contact customer service, and more. Built in React Native with a .NET Core back end.",
     "contribution": "Mobile views for real-time pricing, usage graph, debugging, maintenance",
     "date": "2018-2020",
-    "tags": ["full stack", "front-end", "back-end", "react native", ".NET", "react", "mobile"],
+    "tags": [
+      "full stack",
+      "front-end",
+      "back-end",
+      "react native",
+      ".NET",
+      "react",
+      "mobile"
+    ],
     "imageSource": "https://imgur.com/WkDh1lv.gif",
     "link": "https://play.google.com/store/apps/details?id=com.myambitapp&hl=en_US"
   },
@@ -22,7 +39,15 @@
     "description": "Wobbly is a workplace organising platform, currently under development. We’re creating a space for energetic, powerful, and democratic unions to win struggles and grow.",
     "contribution": "Authentication, email verification, REST refactor",
     "date": "2019-2020",
-    "tags": ["full-stack", "front-end", "back-end", "javascript", "react native", "GraphQL", "elixir"],
+    "tags": [
+      "full-stack",
+      "front-end",
+      "back-end",
+      "javascript",
+      "react native",
+      "GraphQL",
+      "elixir"
+    ],
     "imageSource": "https://notesfrombelow.org/media/articles/wobblyapp.jpg",
     "link": "https://wobbly.app"
   },
