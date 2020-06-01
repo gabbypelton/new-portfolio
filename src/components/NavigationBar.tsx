@@ -8,7 +8,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  NavbarText
+  NavbarText,
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
@@ -19,12 +19,12 @@ interface State {
 
 export class NavigationBar extends Component<Props, State> {
   state = {
-    isOpen: false
+    isOpen: false,
   };
 
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
     });
   }
 
@@ -50,7 +50,7 @@ export class NavigationBar extends Component<Props, State> {
               </NavItem>
             </Nav>
             <NavbarText>
-              <a href="https://github.com/greatgabsp">github</a>
+              <a href="https://github.com/gabbypelton">github</a>
             </NavbarText>
           </Collapse>
         </Navbar>

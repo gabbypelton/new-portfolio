@@ -6,7 +6,20 @@
     "date": "May 2020",
     "tags": [],
     "imageSource": "https://imgur.com/zxlhbGd.gif",
-    "link": "https://drivefair.netlify.com"
+    "urls": [
+      {
+        "name": "API",
+        "location": "https://github.com/gabbypelton/drivefair.api"
+      },
+      {
+        "name": "Web",
+        "location": "https://github.com/gabbypelton/drivefair.web"
+      },
+      {
+        "name": "Mobile",
+        "location": "https://github.com/gabbypelton/drivefair.mobile"
+      }
+    ]
   },
   {
     "title": "My Ambit App",
@@ -23,7 +36,12 @@
       "mobile"
     ],
     "imageSource": "https://imgur.com/WkDh1lv.gif",
-    "link": "https://play.google.com/store/apps/details?id=com.myambitapp&hl=en_US"
+    "urls": [
+      {
+        "name": "Play Store",
+        "location": "https://play.google.com/store/apps/details?id=com.myambitapp&hl=en_US"
+      }
+    ]
   },
   {
     "title": "Snap And Save",
@@ -32,7 +50,7 @@
     "date": "2019",
     "tags": ["full stack", "front-end", "back-end", "javascript"],
     "imageSource": "https://cdn.ambitenergy.io/images/ambitenergy/snap-and-save-logo.png",
-    "link": "https://www.snapandsave.com"
+    "urls": [{ "name": "More Info", "location": "https://www.snapandsave.com" }]
   },
   {
     "title": "Wobbly App",
@@ -49,7 +67,10 @@
       "elixir"
     ],
     "imageSource": "https://notesfrombelow.org/media/articles/wobblyapp.jpg",
-    "link": "https://wobbly.app"
+    "urls": [
+      { "name": "More Info", "location": "https://wobbly.app" },
+      { "name": "Repos", "location": "https://github.com/wobbly-app" }
+    ]
   },
   {
     "title": "Gabriella Pelton Portfolio Site",
@@ -58,6 +79,8 @@
     "date": "January 2020",
     "tags": [],
     "imageSource": "https://imgur.com/zkJWCfR.png",
-    "link": "https://github.com/greatgabsp/portfolio"
+    "urls": [
+      { "name": "Repo", "location": "https://github.com/greatgabsp/portfolio" }
+    ]
   }
 ]
