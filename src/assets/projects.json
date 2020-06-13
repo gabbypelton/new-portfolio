@@ -1,5 +1,16 @@
 [
   {
+    "title": "Gabriella Pelton Portfolio Site",
+    "description": "This site.",
+    "contribution": "All of it because it's for me. I used React and a couple of open source libraries. Click to see the repo on Github.",
+    "date": "January 2020",
+    "tags": [],
+    "imageSource": "https://imgur.com/L49jH87.png",
+    "urls": [
+      { "name": "Repo", "location": "https://github.com/greatgabsp/portfolio" }
+    ]
+  },
+  {
     "title": "DriveFair",
     "description": "Food delivery app. Web application for restaurants to create menu items, and customers to order. Mobile application for drivers to pick up, navigate, and deliver orders.",
     "contribution": "100% of front-end, back-end, and mobile development.",
@@ -51,36 +62,5 @@
     "tags": ["full stack", "front-end", "back-end", "javascript"],
     "imageSource": "https://cdn.ambitenergy.io/images/ambitenergy/snap-and-save-logo.png",
     "urls": [{ "name": "More Info", "location": "https://www.snapandsave.com" }]
-  },
-  {
-    "title": "Wobbly App",
-    "description": "Wobbly is a workplace organising platform, currently under development. We’re creating a space for energetic, powerful, and democratic unions to win struggles and grow.",
-    "contribution": "Authentication, email verification, REST refactor",
-    "date": "2019-2020",
-    "tags": [
-      "full-stack",
-      "front-end",
-      "back-end",
-      "javascript",
-      "react native",
-      "GraphQL",
-      "elixir"
-    ],
-    "imageSource": "https://notesfrombelow.org/media/articles/wobblyapp.jpg",
-    "urls": [
-      { "name": "More Info", "location": "https://wobbly.app" },
-      { "name": "Repos", "location": "https://github.com/wobbly-app" }
-    ]
-  },
-  {
-    "title": "Gabriella Pelton Portfolio Site",
-    "description": "This site.",
-    "contribution": "All of it because it's for me. I used React and a couple of open source libraries. Click to see the repo on Github.",
-    "date": "January 2020",
-    "tags": [],
-    "imageSource": "https://imgur.com/zkJWCfR.png",
-    "urls": [
-      { "name": "Repo", "location": "https://github.com/greatgabsp/portfolio" }
-    ]
   }
 ]

@@ -31,7 +31,7 @@ export class NavigationBar extends Component<Props, State> {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar color="none" dark expand="md">
           <Link to="/">
             <NavbarBrand>Gabriella Pelton</NavbarBrand>
           </Link>

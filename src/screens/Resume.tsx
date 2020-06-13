@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import pic from "../assets/resume.jpg";
 import { Button } from "reactstrap";
+import { Document, Page, pdfjs } from "react-pdf";
+import * as pdfFile from "../assets/resume.pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 interface Props {}
 interface State {}
@@ -11,38 +14,23 @@ export class Resume extends Component<Props, State> {
 
   render() {
     return (
-      <div style={{ width: "inherit", maxWidth: "inherit" }}>
-        <div
-          style={{
-            width: "100%",
-            height: "3rem",
-            backgroundColor: "#f8f9fa",
-            display: "flex",
-            flexFlow: "row nowrap",
-            justifyContent: "center",
-          }}
-        >
-          <a
-            href="./Gabriella Pelton Resume 2020.pdf"
-            download="Gabriella Pelton Resume 2020"
-          >
-            <Button>Download PDF</Button>
-          </a>
+      <div
+        style={{
+          width: "inherit",
+          maxWidth: "inherit",
+          display: "flex",
+          flexFlow: "column nowrap",
+          alignItems: "center",
+        }}
+      >
+        <a href={pdfFile} download="Gabriella Pelton Resume 2020">
+          <Button style={{ margin: "1rem" }}>Download PDF</Button>
+        </a>
+        <div>
+          <Document file={pdfFile}>
+            <Page pageNumber={1} />
+          </Document>
         </div>
-        <iframe
-          className="resume__iframe"
-          src="https://resume.creddle.io/resume/gcvhp338b0x"
-          width="100%"
-          height="1250"
-          scrolling="no"
-          frameBorder="none"
-          title="resume"
-        />
-        <img
-          className="resume__img"
-          src={pic}
-          alt="Gabriella Pelton Resume 2020"
-        />
       </div>
     );
   }
